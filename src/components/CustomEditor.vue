@@ -15,7 +15,7 @@
         editorData: '<p>This is my custom editor.</p>',
         editorConfig: { // The configuration of the editor.
           height: 500,
-          extraPlugins: 'colorbutton, colordialog, dialog, indentblock, indentlist, justify, font, codesnippet, myImage, myDialog',
+          extraPlugins: 'colorbutton, colordialog, dialog, indentblock, indentlist, justify, font, codesnippet, myImage, myDialog, mylink',
           removePlugins: 'resize, image',
           language: 'en',
           allowedContent: true,
@@ -45,7 +45,7 @@
             },
             {
               name: 'links',
-              items: ['Link', 'Unlink']
+              items: ['MyLink', 'Unlink']
             },
 
             {

@@ -8,6 +8,7 @@
 <script>
   import myImage from './plugins/myImage'
   import myDialog from './plugins/myDialog'
+  import myLink from './plugins/myLink'
   export default {
     name: 'Editor',
     data () {
@@ -34,6 +35,7 @@
         console.log(CKEDITOR)
         myImage.init()
         myDialog.init()
+        myLink.init()
         CKEDITOR.addCss(`body{background: #7b8b6f;color: white;}`)
       },
       onEditorReady (editor) {
