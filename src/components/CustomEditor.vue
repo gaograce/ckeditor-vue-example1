@@ -1,7 +1,7 @@
 <template>
  <div>
    <editor ref="editor" :config="editorConfig" :ready="init"></editor>
-   <my-dialog ref="dialog"></my-dialog>
+   <my-dialog ref="dialog" @content-changed="html => insertContent(html)"></my-dialog>
  </div>
 </template>
 
