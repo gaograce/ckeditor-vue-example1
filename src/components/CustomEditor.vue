@@ -2,12 +2,14 @@
  <div>
    <editor ref="editor" :config="editorConfig" :ready="init"></editor>
    <my-dialog ref="dialog" @content-changed="html => insertContent(html)"></my-dialog>
+   <image-properties ref="image"></image-properties>
  </div>
 </template>
 
 <script>
   import Editor from './Editor'
   import MyDialog from './dialog/MyDialog'
+  import ImageProperties from './dialog/image-properties'
   export default {
     name: 'CkEditor',
     data () {
@@ -61,6 +63,7 @@
         console.log(editor)
         editor.setData(this.editorData)
         editor.dialog = this.$refs.dialog
+        editor.imageProperties = this.$refs.image
       },
       getContent () {
         return this.$refs.editor.getContent()
@@ -86,7 +89,8 @@
     },
     components: {
       MyDialog,
-      Editor
+      Editor,
+      ImageProperties
     }
   }
 </script>
